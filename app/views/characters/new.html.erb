@@ -34,7 +34,8 @@
 
     <%= select_tag(:movie_id, options_from_collection_for_select(Movie.all, :id, :title, @character.movie_id), :class => "form-control") %>
 
-    <a href="/movies/new">Cancel</a>
+    <a href="/movies/new">Add new movie</a>
+    <a href="/actors/new">Add new actor</a>
 
   </div>
   <!-- Label and input for actor_id -->

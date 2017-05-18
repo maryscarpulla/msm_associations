@@ -17,7 +17,11 @@
       <dd><%= truncate(@director.bio) %></dd>
 
       <dt>Number of films directed</dt>
-      <dd><%= Movie.where(:director_id => @director.id).count %></dd>
+      <dd><%= @director.movies.count %></dd>
+      <!--
+
+      <dt>Number of films directed</dt>
+      <dd><%= Movie.where(:director_id => @director.id).count %></dd> -->
 
 
 
@@ -96,28 +100,28 @@
 
       <!-- Label and input for director_id -->
       <!-- <div class="form-group">
-        <label for="director_id" class="control-label">
-          Director
-        </label> -->
-<!--
-        <input type="text" id="director_id" name="director_id" placeholder="Director" class="form-control" value="<%= @movie.director_id %>"> -->
-        <!-- <select name ="director_id" class ="form-control">
-          <% Director.all.each do |director| %>
-          <option value ="<%= director.id %>"><%= director.name  %></option>
-          <% end %>
-        </select> -->
+      <label for="director_id" class="control-label">
+      Director
+    </label> -->
+    <!--
+    <input type="text" id="director_id" name="director_id" placeholder="Director" class="form-control" value="<%= @movie.director_id %>"> -->
+    <!-- <select name ="director_id" class ="form-control">
+    <% Director.all.each do |director| %>
+    <option value ="<%= director.id %>"><%= director.name  %></option>
+    <% end %>
+  </select> -->
 
-        <!-- <%= select_tag(:director_id, options_from_collection_for_select(Director.all, :id, :name, @movie.director_id), :class => "form-control") %> -->
+  <!-- <%= select_tag(:director_id, options_from_collection_for_select(Director.all, :id, :name, @movie.director_id), :class => "form-control") %> -->
 
-        <input type = "hidden" name = "director_id" value = "<%= @director.id %>"
+  <input type = "hidden" name = "director_id" value = "<%= @director.id %>"
 
-      </div>
+</div>
 
-      <button class="btn btn-success">
-        Create Movie
-      </button>
-      or
-      <a href="/movies">Cancel</a>
-    </form>
-  </div>
+<button class="btn btn-success">
+  Create Movie
+</button>
+or
+<a href="/movies">Cancel</a>
+</form>
+</div>
 </div>
